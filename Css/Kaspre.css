@@ -259,6 +259,8 @@ header {
     bottom: 30px;
     transform: translateX(-50%);
     left: 50%;
+    justify-content: space-between;
+    width: 80px;
    
 
 }
@@ -266,7 +268,7 @@ header {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    margin-left: 10px;
+    /* margin-left: 10px; */
     border: 1px solid white;
 
 }
@@ -303,15 +305,26 @@ header {
     display: flex;
 }
 .services  .services-container .srv-box .text {
-    flex: 1;
-    margin-left: 30px;
+    margin-left: 50px;
 }
+@media (max-width:767px) {
+  .services  .services-container .srv-box {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 30px;
+
+  }
+  .services  .services-container .srv-box .text  {
+    margin: 30px auto 0;
+
+
+  }
+
+}
+
 .services  .services-container .srv-box .text h3 {
     color: var(--main-color);
     margin-bottom: 30px;
-    letter-spacing: 1px;
-
-
 
 }
 .services  .services-container .srv-box .text p {
@@ -322,28 +335,15 @@ header {
 
 }
 
-@media (max-width:767px) {
-    .services  .services-container .srv-box {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 30px;
-
-    }
-    .services  .services-container .srv-box .text  {
-        margin-top: 30px;
-
-    }
-
-}
 
 
 
 
 
 .mobile {
-    background-image: url(../design-features.jpg);
+    background-image: url(../images/fetu.jpg);
     background-size:cover;
-    min-height: 100vh;
+    height: 600px;
     position: relative;
     display: flex;
     align-items: center;
@@ -353,6 +353,7 @@ header {
     height: 600px;
 
 }
+
 .mobile::before {
     content: "";
     position: absolute;
@@ -370,11 +371,21 @@ header {
     z-index: 2;
     text-align: center;
 }
-@media (max-width: 767px) {
-    .mobile .image {
-      display: none;
-    }
+@media (max-width:767px) {
+  .mobile .image {
+    display: none;
+
   }
+
+}
+/* @media (max-width: 767px) {
+    .mobile {
+      flex-direction: column-reverse;
+      justify-content: space-evenly;      
+      
+    }
+
+  } */
 .mobile .text {
     position: relative;
     z-index: 2;
@@ -383,6 +394,7 @@ header {
     padding: 50px;
     color: white;
 }
+
 .mobile .image img {
     position: relative;
     bottom: -150px;
@@ -409,32 +421,6 @@ header {
 
 
 }
-/* @media (max-width:767px) {
-    .mobile {
-        display: flex;
-        flex-direction: column;
-        min-height: 1000px;
-        
-
-    }
-    .mobile .image {
-        position: relative;
-        top: -200px;
-        flex: 1;
-
-    }
-    .mobile .text {
-        position: relative;
-        bottom: 20px;
-        width: 100%;
-       
-    }
-    .mobile .text h3 {
-        font-size: 22px;
-
-    }
-} */
-
 
 
 
